@@ -1,0 +1,20 @@
+{
+  "name": "Dev Favicon",
+  "description": "Change the favicon to a green icon on the local dev environment",
+  "version": "1.0",
+    "permissions": [
+        "http://localhost/*"
+    ],
+      "content_scripts": [
+          {
+              "matches": ["http://localhost/*"],
+              "js": ["popup.js"]
+          }
+      ],"web_accessible_resources": [
+        "dev.ico"
+      ],"icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png" },
+  "manifest_version": 2
+}
