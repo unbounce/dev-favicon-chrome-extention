@@ -1,31 +1,27 @@
 {
   "name": "Unbounce Dev Favicon",
-  "description": "Change the favicon to a green icon on the local dev environment",
-  "version": "1.1",
-    "permissions": [
-      "http://localhost/*"
-    ],
+  "description": "Change the favicon color depending on the dev environment",
+  "version": "2",
+
     "content_scripts": [
       {
-        "matches": ["http://localhost/*"],
-        "js": ["popup-local.js"]
-      },
-      {
-        "matches": ["http://app-test.unbounce.com/*"],
-        "matches": ["https://app-test.unbounce.com/*"],
-        "js": ["popup-local.js"]
-      },
-      {
-        "matches": ["http://app-test-builder.unbounce.com/*"],
-        "matches": ["https://app-test-builder.unbounce.com/*"],
+        "matches": [
+          "*://localhost/*",
+          "*://app-test.unbounce.com/*",
+          "*://app-test-builder.unbounce.com/*"
+        ],
         "js": ["popup-local.js"]
       }
 
-    ],"web_accessible_resources": [
-      "dev.ico"
+    ],
+    "web_accessible_resources": [
+      "icon-green-icon.ico",
+      "icon-orange-icon.ico",
+      "icon-purple-icon.ico",
+      "icon-red-icon.ico"
     ],"icons": {
-      "16": "icon16.png",
-      "48": "icon48.png",
-      "128": "icon128.png" },
+      "16": "icon-green-16.png",
+      "48": "icon-green-48.png",
+      "128": "icon-green-128.png" },
   "manifest_version": 2
 }
