@@ -1,14 +1,17 @@
 {
   "name": "Unbounce Dev Favicon",
   "description": "Change the favicon color depending on the dev environment",
-  "version": "2",
+  "version": "2.4",
 
     "content_scripts": [
       {
         "matches": [
           "*://localhost/*",
           "*://app-test.unbounce.com/*",
-          "*://app-test-builder.unbounce.com/*"
+          "*://app-test-builder.unbounce.com/*",
+          "*://app-test-pds.unbounce.com/*",
+          "*://app-test-webapp.unbounce.com/*",
+          "*://*.ub/*"
         ],
         "js": ["popup-local.js"]
       }
@@ -18,7 +21,8 @@
       "icon-green-icon.ico",
       "icon-orange-icon.ico",
       "icon-purple-icon.ico",
-      "icon-red-icon.ico"
+      "icon-red-icon.ico",
+      "icon-blue-icon.ico"
     ],"icons": {
       "16": "icon-green-16.png",
       "48": "icon-green-48.png",
